@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/stylesheets/main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Black Ops One' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cabin Sketch' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fuggles&family=Otomanopee+One&display=swap" rel="stylesheet">
+  <script src="public/javascripts/display.js"></script>
+   <script src="public/javascripts/line_chart_confirmed.js"></script>
+	<script src="public/javascripts/line_chart_active.js"></script>
+	<script src="public/javascripts/line_chart_deceased.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<meta charset="ISO-8859-1">
+	
+<title>Covid-19 Tracker</title>
+</head>
+<body>
+
+
+<nav id="nav-1" class="navbar navbar-light justify-content-center navbar-dark bg-primary"">
+ <h1 class="display-12 nav-item">India Covid-19 Tracker</h1>
+<br>
+</nav>
+<nav id="nav-2" class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md navbar-expand navbar-dark bg-primary">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+     <li class="nav-item active">
+        <a class="nav-link" href="#">
+          <i class="fa fa-home"></i>
+          Home
+          <span class="sr-only">(current)</span>
+          </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="tabbable.html">
+		 <i class="fa fa-book fa-fw"></i> DistricWise
+		  </a>
+     
+	</li>
+		<li class="nav-item ">
+        <a class="nav-link" href="help.html">
+		 <i class="fa fa-pencil fa-fw"></i> Help
+		  </a>
+     
+	</li>
+      </ul>
+	   <p id="p1">
+		  Developed By Kishan Roy
+	  </p>
+  </div>
+</nav>
+
+<br>
+	<br>
+<div id="Home_Page">
+<div class="container col-12 col-md-6" style="align:left;">
+	<div class="container">
+	<div id="tot_pat" class="card1 card text-white bg-primary mb-3 d-inline-block" style="align:left;">
+       <div class="card-header">Total</div>
+       <div id="ttlp" class="card-body">
+         <p class="card-text"></p>
+       </div>
+    </div>
+    <div class="card2 card text-white bg-warning mb-3 d-inline-block" style="align:left;">
+	   <div class="card-header">Active</div>
+       <div id="active_patients" class="card-body">
+          <p class="card-text"></p>
+       </div>
+	</div>
+	<div id="tot_pat" class="card3 card text-white bg-success mb-3 d-inline-block" style="align:left;">
+       <div class="card-header">Recovered</div>
+       <div id="rec_p" class="card-body">
+         <p class="card-text"></p>
+       </div>
+    </div>
+    <div class="card4 card text-white bg-danger mb-3 d-inline-block" style="align:left;">
+	   <div class="card-header">Deceased</div>
+       <div id="dec_p" class="card-body">
+          <p align="center" class="card-text"></p>
+       </div>
+	</div>
+	</div>
+</div>
+<br>
+<br>
+
+<div class="container">
+  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+  <div class="row">
+      <div class="col-12 col-md-6 col-sm-6">
+		
+        <table  cellspacing="0" cellpadding="0" class="table-striped" align="left" >
+          <thead>
+              <tr>
+                <th>State<span class="glyphicon glyphicon-sort"></span>
+                </th>
+            
+                <th>Confirmed Patients</th>
+            
+                <th class="hel1">Active Patients </th>
+          
+                <th class="hel2">Recovered Patients</th>
+            
+                <th>Deceased Patients</th>
+              </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+	  
+	  
+     <div class="col-12 col-md-6 col-sm-6">
+		 <br>
+	  
+       <div align="center" class="col-12 col-md-12 col-sm-12 col-lg-12" id="curve_chart_confirmed" style="border-left: 10px;"></div>
+     <br>
+     <div align="center" class="col-12 col-md-12 col-sm-12 col-lg-12" id="curve_chart_deceased"></div>
+     <br>
+     <div align="center" class="col-12 col-md-12 col-sm-12 col-lg-12" id="curve_chart_recovered"></div>
+	  </div>
+
+  </div>
+</div>
+</div>
+<br>
+</body>
+</html>
